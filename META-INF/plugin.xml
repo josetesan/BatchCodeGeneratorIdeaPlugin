@@ -1,0 +1,47 @@
+<idea-plugin version="2">
+  <id>com.yourcompany.unique.plugin.id</id>
+  <name>Plugin display name here</name>
+  <version>1.0</version>
+  <vendor email="muallin@gmail.com" url="http://www.yourcompany.com">Jose Luis Sanchez</vendor>
+
+  <description><![CDATA[
+      Generates toString() methods for all the classes inside a given source code folder.<br>
+      If an already existing implementation exists, skips that one.
+
+    ]]></description>
+
+  <change-notes><![CDATA[
+      V0.1 Started Development<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="org.josete.idea.plugins.BatchJavaGenerator.Generator" class="org.josete.idea.plugins.BatchJavaGenerator" text="Batch Generate"
+            description="Generates toString(), hashCode() or equals() for multiple Java source code files">
+      <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="Generate"/>
+    </action>
+  </actions>
+
+</idea-plugin>
